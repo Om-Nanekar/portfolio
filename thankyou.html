@@ -1,71 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | Om Naresh Nanekar</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <title>Thank You | Om Naresh Nanekar</title>
+  <meta name="description" content="Thank you for contacting Om Naresh Nanekar.">
+  <meta name="robots" content="noindex">
 
-    <style>
-        body{
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-            background:#0d1117;
-            color:white;
-            text-align:center;
-            font-family:Arial,sans-serif;
-        }
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
 
-        .card{
-            max-width:600px;
-            padding:40px;
-            border-radius:20px;
-            background:#161b22;
-            box-shadow:0 10px 30px rgba(0,0,0,.4);
-        }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        h1{
-            color:#00d084;
-            margin-bottom:20px;
-        }
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
-        a{
-            margin-top:25px;
-            display:inline-block;
-            text-decoration:none;
-            padding:12px 28px;
-            background:#0d6efd;
-            color:white;
-            border-radius:8px;
-        }
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
 
-        a:hover{
-            background:#0b5ed7;
-        }
-    </style>
+  <style>
+    body{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      overflow:hidden;
+    }
+
+    .thank-card{
+      max-width:700px;
+      width:95%;
+      text-align:center;
+      padding:60px 50px;
+      border-radius:25px;
+      backdrop-filter:blur(12px);
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:0 20px 60px rgba(0,0,0,.35);
+    }
+
+    .success-icon{
+      width:120px;
+      height:120px;
+      margin:auto;
+      border-radius:50%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:60px;
+      color:#34d399;
+      background:rgba(52,211,153,.12);
+      margin-bottom:30px;
+    }
+
+    h1{
+      font-weight:700;
+      margin-bottom:20px;
+    }
+
+    p{
+      font-size:18px;
+      opacity:.85;
+      line-height:1.8;
+    }
+
+    .btn-home{
+      margin-top:35px;
+      padding:14px 35px;
+      border-radius:50px;
+      font-weight:600;
+    }
+
+    .social-links{
+      margin-top:35px;
+    }
+
+    .social-links a{
+      width:48px;
+      height:48px;
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      border-radius:50%;
+      margin:0 8px;
+      transition:.3s;
+      font-size:20px;
+    }
+
+    .social-links a:hover{
+      transform:translateY(-6px);
+    }
+
+    .footer-note{
+      margin-top:30px;
+      font-size:14px;
+      opacity:.6;
+    }
+  </style>
+
 </head>
+
 <body>
 
-<div class="card">
+<main>
 
-<h1>✅ Thank You!</h1>
+<div class="thank-card" data-aos="zoom-in" data-aos-duration="900">
 
-<p>
-Your message has been sent successfully.
+<div class="success-icon" data-aos="zoom-in" data-aos-delay="300">
+<i class="bi bi-check2-circle"></i>
+</div>
+
+<h1 data-aos="fade-up" data-aos-delay="500">
+Thank You!
+</h1>
+
+<p data-aos="fade-up" data-aos-delay="700">
+Your message has been received successfully.
 </p>
 
-<p>
-I'll review it and get back to you as soon as possible.
+<p data-aos="fade-up" data-aos-delay="900">
+I truly appreciate you taking the time to reach out.
+Whether it's about collaboration, internships, projects, or simply connecting,
+I'll review your message and get back to you as soon as possible.
 </p>
 
-<a href="index.html">
-Return to Portfolio
+<a href="index.html" class="btn btn-primary btn-home" data-aos="fade-up" data-aos-delay="1100">
+<i class="bi bi-house-door-fill"></i>
+Back to Portfolio
+</a>
+
+<div class="social-links" data-aos="fade-up" data-aos-delay="1300">
+
+<a href="https://github.com/YOUR_USERNAME" target="_blank">
+<i class="bi bi-github"></i>
+</a>
+
+<a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">
+<i class="bi bi-linkedin"></i>
+</a>
+
+<a href="mailto:YOUR_EMAIL@gmail.com">
+<i class="bi bi-envelope-fill"></i>
 </a>
 
 </div>
+
+<div class="footer-note" data-aos="fade-up" data-aos-delay="1500">
+Made with ❤️ by Om Naresh Nanekar
+</div>
+
+</div>
+
+</main>
+
+<!-- Vendor JS -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+
+<script>
+AOS.init({
+duration:800,
+once:true
+});
+</script>
 
 </body>
 </html>
