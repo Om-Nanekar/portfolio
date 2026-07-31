@@ -88,21 +88,34 @@ Navigation| Waypoints
 
 Project Structure
 
+```text
 portfolio/
-├── index.html
-├── thankyou.html
 ├── assets/
 │   ├── css/
-│   │   └── main.css
+│   │   └── main.css              # Main stylesheet
 │   ├── js/
-│   │   └── main.js
+│   │   └── main.js               # Main JavaScript
 │   ├── img/
 │   │   ├── profile/
 │   │   │   └── profile1.jpg
+│   │   ├── favicon.png
+│   │   ├── apple-touch-icon.png
 │   │   └── ...
 │   └── vendor/
-│       └── ...
+│       ├── bootstrap/
+│       ├── bootstrap-icons/
+│       ├── aos/
+│       ├── glightbox/
+│       ├── imagesloaded/
+│       ├── isotope-layout/
+│       ├── purecounter/
+│       ├── swiper/
+│       ├── typed.js/
+│       └── waypoints/
+├── index.html                    # Main portfolio page
+├── thankyou.html                 # Contact form success page
 └── README.md
+```
 
 ---
 
