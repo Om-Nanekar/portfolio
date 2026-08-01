@@ -1,12 +1,15 @@
-Om Naresh Nanekar - Portfolio Website
+#Om Naresh Nanekar - Portfolio Website
 
 A clean, responsive, single-page personal portfolio website built with the BootstrapMade SnapFolio template and customized for Om Naresh Nanekar.
 
-Live Website: https://om-nanekar.github.io/portfolio
+#Live Website: 
+'''text
+https://om-nanekar.github.io/portfolio
+'''
 
 ---
 
-Overview
+#Overview
 
 This portfolio is a modern one-page website designed to present my profile, skills, projects, and contact information in a simple and professional format. It is built for smooth scrolling navigation and a responsive layout that works well on desktop, tablet, and mobile devices.
 
