@@ -1,109 +1,119 @@
-#Om Naresh Nanekar - Portfolio Website
+# 🌐 Om Naresh Nanekar - Portfolio Website
 
-A clean, responsive, single-page personal portfolio website built with the BootstrapMade SnapFolio template and customized for Om Naresh Nanekar.
+A clean, responsive, and modern personal portfolio website built using the **BootstrapMade SnapFolio** template and customized to showcase my skills, projects, and journey as a Computer Engineering student.
 
-#Live Website: 
-'''text
-https://om-nanekar.github.io/portfolio
-'''
+## 🔗 Live Demo
 
----
-
-#Overview
-
-This portfolio is a modern one-page website designed to present my profile, skills, projects, and contact information in a simple and professional format. It is built for smooth scrolling navigation and a responsive layout that works well on desktop, tablet, and mobile devices.
-
-The website includes:
-
-- Hero section with personal introduction
-- About section with background and education details
-- Skills section with technology cards
-- Projects section with project showcases
-- Contact section with contact details and form
-- Social media links for quick connection
+**Website:**  
+👉 https://om-nanekar.github.io/portfolio
 
 ---
 
-Features
+# 📖 Overview
+
+This is a fully responsive **single-page portfolio website** designed to present my profile in a simple, modern, and professional way. It features smooth scrolling navigation, interactive animations, project showcases, and multiple ways to connect with me.
+
+### ✨ Highlights
+
+- 👋 Hero section with introduction
+- 👨‍💻 About section
+- 💡 Skills showcase
+- 📂 Project gallery
+- 📞 Contact section
+- 🌐 Social media links
+- 📱 Fully responsive design
+
+---
+
+# 🚀 Features
 
 - Responsive single-page layout
 - Smooth scrolling navigation
-- Animated typing effect in the hero section
-- Skills cards with hover interaction
-- Project cards with hover interaction
-- Contact form for direct communication
-- Social media links
-- Built using Bootstrap 5.3.7
+- Animated typing effect
+- Interactive Skills cards
+- Hover animations for Project cards
+- Contact form
+- Social media integration
+- Built with Bootstrap 5
 - Hosted on GitHub Pages
 
 ---
 
-Sections
+# 📑 Website Sections
 
-Section| Purpose
-Home| Displays name, typing animation, introduction, and CTA buttons
-About| Shares background, education, and interests
-Skills| Shows programming languages and tools
-Projects| Highlights practical projects
-Contact| Provides location, phone, email, and form
+| Section | Description |
+|---------|-------------|
+| 🏠 Home | Personal introduction, typing animation, CTA buttons |
+| 👤 About | Background, education, and interests |
+| 💻 Skills | Programming languages and technologies |
+| 📂 Projects | Showcase of personal projects |
+| 📞 Contact | Contact information and contact form |
 
 ---
 
-Skills
+# 🛠 Skills
 
-The portfolio currently highlights these skills:
+Currently featured technologies:
 
 - Python
 - C
 - C++
-- HTML
-- CSS
+- HTML5
+- CSS3
 - Git
 - GitHub
 - Linux
 
 ---
 
-Projects
+# 📂 Projects
 
-The projects section currently includes:
+### 💰 Expense Manager
+A Python CLI application for managing daily expenses.
 
-- Expense Manager - Python CLI app
-- Jarvis - Simple Python Voice Assistant - Python voice assistant project
-- Password Manager - Python CLI app
+### 🎙 Jarvis - Python Voice Assistant
+A simple voice assistant built using Python.
 
----
-
-Technologies Used
-
-Category| Tools / Libraries
-Frontend| HTML, CSS, JavaScript
-Framework| Bootstrap 5.3.7
-Icons| Bootstrap Icons
-Animation| AOS, Typed.js
-Slider| Swiper
-Lightbox| Glightbox
-Counter| PureCounter
-Filtering| Isotope, ImagesLoaded
-Navigation| Waypoints
+### 🔐 Password Manager
+A command-line password management application built with Python.
 
 ---
 
-Project Structure
+# ⚙ Technologies Used
+
+| Category | Technologies |
+|----------|--------------|
+| Frontend | HTML5, CSS3, JavaScript |
+| Framework | Bootstrap 5.3.7 |
+| Icons | Bootstrap Icons |
+| Animation | AOS, Typed.js |
+| Slider | Swiper |
+| Lightbox | Glightbox |
+| Counter | PureCounter |
+| Filtering | Isotope, ImagesLoaded |
+| Navigation | Waypoints |
+
+---
+
+# 📁 Project Structure
 
 ```text
 portfolio/
+│
 ├── assets/
 │   ├── css/
-│   │   └── main.css              # Main stylesheet
+│   │   └── main.css
+│   │
 │   ├── js/
-│   │   └── main.js               # Main JavaScript
+│   │   └── main.js
+│   │
 │   ├── img/
 │   │   ├── profile/
 │   │   │   └── profile1.jpg
 │   │   ├── favicon.png
 │   │   ├── apple-touch-icon.png
 │   │   └── ...
+│   │
 │   └── vendor/
 │       ├── bootstrap/
 │       ├── bootstrap-icons/
@@ -115,43 +125,54 @@ portfolio/
 │       ├── swiper/
 │       ├── typed.js/
 │       └── waypoints/
-├── index.html                    # Main portfolio page
-├── thankyou.html                 # Contact form success page
+│
+├── index.html
+├── thankyou.html
 └── README.md
 ```
 
 ---
 
-Setup Instructions
+# ⚡ Getting Started
 
-Clone the repository
+## Clone the Repository
 
+```bash
 git clone https://github.com/Om-Nanekar/portfolio.git
+```
 
-Open the project
+## Run Locally
 
-Open "index.html" in your browser or use a local server for testing.
-
-Deploy on GitHub Pages
-
-This project is hosted on GitHub Pages and can be accessed here:
-
-https://om-nanekar.github.io/portfolio
+Simply open **index.html** in your browser or use a local development server such as **Live Server** in VS Code.
 
 ---
 
-Contact
+# 🌍 Deployment
 
-- Name: Om Naresh Nanekar
-- Location: Chakan, Pune 410501
-- Phone: +91 8421907056
-- Email: nanekarom6746@gmail.com
+This website is hosted using **GitHub Pages**.
+
+**Live Website:**  
+👉 https://om-nanekar.github.io/portfolio
 
 ---
 
-Credits
+# 📬 Contact
 
-- BootstrapMade SnapFolio template
+**Om Naresh Nanekar**
+
+📍 Chakan, Pune, Maharashtra, India
+
+📧 nanekarom6746@gmail.com
+
+📱 +91 8421907056
+
+---
+
+# 🙏 Credits
+
+This project uses the following open-source resources:
+
+- BootstrapMade SnapFolio Template
 - Bootstrap
 - Bootstrap Icons
 - AOS
@@ -159,9 +180,23 @@ Credits
 - Swiper
 - Glightbox
 - PureCounter
+- Isotope
+- ImagesLoaded
+- Waypoints
 
 ---
 
-Note
+# 📌 Future Improvements
 
-This project is actively being improved. Future updates will continue refining the design, adding more project details, and improving the overall presentation.
+- Add more real-world projects
+- Improve animations and UI
+- Enhance accessibility
+- Add project filtering
+- Include downloadable resume
+- Optimize performance
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a **⭐ Star** on GitHub. It helps others discover the project and motivates future improvements.
