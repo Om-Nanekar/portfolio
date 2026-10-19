@@ -1,525 +1,491 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Om Naresh Nanekar | Computer Engineering Student</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
+  <meta name="description" content="Om Nanekar — Computer Engineering Student Portfolio">
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!-- Vendors -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body class="index-page">
+<body>
 
-  <header id="header" class="header dark-background d-flex flex-column justify-content-center">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+  <!-- ═══ ANIMATED BACKGROUND ═══ -->
+  <div class="bg-scene" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+    <div class="orb orb-5"></div>
+    <canvas id="particles-canvas"></canvas>
+  </div>
 
-    <div class="header-container d-flex flex-column align-items-start">
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-          <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-          <li><a href="#skills"><i class="bi bi-code-slash navicon"></i> Skills</a></li>
-          <li><a href="#projects"><i class="bi bi-folder navicon"></i> Projects</a></li>
-          <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
-        </ul>
-      </nav>
+  <!-- ═══ PRELOADER ═══ -->
+  <div id="preloader">
+    <div class="loader-ring"></div>
+    <p class="loader-name">Om Nanekar</p>
+  </div>
+
+  <!-- ═══ TOP NAVBAR ═══ -->
+  <nav id="navbar" class="navbar-main">
+    <div class="nav-inner">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero"     class="nav-link active">Home</a></li>
+        <li><a href="#about"    class="nav-link">About</a></li>
+        <li><a href="#skills"   class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact"  class="nav-link">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
 
-  </header>
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <ul>
+        <li><a href="#hero"     class="nav-link">Home</a></li>
+        <li><a href="#about"    class="nav-link">About</a></li>
+        <li><a href="#skills"   class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact"  class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <main class="main">
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section id="hero" class="hero">
+    <div class="container hero-container">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
+      <!-- Left: Text -->
+      <div class="hero-text" data-aos="fade-up" data-aos-duration="900">
+        <span class="hero-badge">
+          <span class="badge-dot"></span>Available for opportunities
+        </span>
+        <h1 class="hero-name">Om Naresh<br><span class="gradient-text">Nanekar</span></h1>
+        <p class="hero-role">
+          I'm a&nbsp;<span class="typed" data-typed-items="Learner,Thinker,Builder,Problem Solver"></span>
+        </p>
+        <p class="hero-desc">Passionate about technology, programming, and applying concepts practically to solve meaningful real-world problems through continuous learning and experimentation.</p>
 
-      <div class="background-elements">
-        <div class="bg-circle circle-1"></div>
-        <div class="bg-circle circle-2"></div>
-      </div>
+        <div class="hero-btns">
+          <a href="#contact"  class="btn-primary"><i class="bi bi-chat-dots-fill"></i> Get In Touch</a>
+          <a href="#projects" class="btn-ghost"><i class="bi bi-folder2-open"></i> View Projects</a>
+        </div>
 
-      <div class="hero-content">
-
-        <div class="container">
-          <div class="row align-items-center">
-
-            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-              <div class="hero-text">
-                <!-- <h1>Om Naresh Nanekar</span></h1> -->
-                <h2>Om Naresh Nanekar</h2>
-                <p class="lead">I'm a <span class="typed" data-typed-items="Learner,In training, Thinker"></span></p>
-                <p class="description">Passionate about technology, programming, and applying concepts practically to solve meaningful real-world problems through continuous learning and experimentation.</p>
-
-                <div class="hero-actions">
-                  <!--<a href="#portfolio" class="btn btn-primary">View My Work</a>-->
-                  <a href="#contact" class="btn btn-outline">Get In Touch</a>
-                  <a href="#projects" class="btn btn-outline">View Projects</a>
-                </div>
-
-                <div class="social-links">
-                  <a href="https://github.com/Om-Nanekar"><i class="bi bi-github"></i></a>
-                  <a href="https://www.linkedin.com/in/om-nanekar"><i class="bi bi-linkedin"></i></a>
-                  <a href="https://wa.me/918421907056"><i class="bi bi-whatsapp"></i></a>
-                  <a href="mailto:nanekarom6746@gmail.com"><i class="bi bi-envelope-fill"></i></a>
-                  <a href="https://discord.com/users/itsomii_01"><i class="bi bi-discord"></i></a>
-                  <a href="https://www.instagram.com/om_naresh_nanekar_/" target="_blank"><i class="bi bi-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-              <div class="hero-visual">
-                <div class="profile-container">
-                  <div class="profile-background"></div>
-                  <img src="assets/img/profile/profile1.jpg" alt="Alexander Chen" class="profile-image">
-                </div>
-              </div>
-            </div>
-
-          </div>
+        <div class="hero-socials">
+          <a href="https://github.com/Om-Nanekar"            target="_blank" class="social-pill" title="GitHub">   <i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/om-nanekar"   target="_blank" class="social-pill" title="LinkedIn"> <i class="bi bi-linkedin"></i></a>
+          <a href="https://wa.me/918421907056"                target="_blank" class="social-pill" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          <a href="mailto:nanekarom6746@gmail.com"                            class="social-pill" title="Email">    <i class="bi bi-envelope-fill"></i></a>
+          <a href="https://discord.com/users/itsomii_01"     target="_blank" class="social-pill" title="Discord">  <i class="bi bi-discord"></i></a>
+          <a href="https://www.instagram.com/om_naresh_nanekar_/" target="_blank" class="social-pill" title="Instagram"><i class="bi bi-instagram"></i></a>
         </div>
       </div>
 
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row">
-          <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
-            <div class="profile-card">
-              <div class="profile-header">
-                <div class="profile-image">
-                  <img src="assets/img/profile/profile1.jpg" alt="Profile Image" class="img-fluid">
-                </div>
-                <div class="profile-badge">
-                  <i class="bi bi-check-circle-fill"></i>
-                </div>
-              </div>
-
-              <div class="profile-content">
-                <h3>Om Nanekar</h3>
-                <p class="profession">Learning &amp; Building</p>
-
-                <div class="contact-links">
-                  <a href="mailto:nanekarom6746@gmail.com" class="contact-item">
-                    <i class="bi bi-envelope"></i>
-                    nanekarom6746@gmail.com
-                  </a>
-                  <a href="tel:+918421907056" class="contact-item">
-                    <i class="bi bi-telephone"></i>
-                    +918421907056
-                  </a>
-                  <a href="#" class="contact-item">
-                    <i class="bi bi-geo-alt"></i>
-                    Chakan, Pune
-                  </a>
-                </div>
-              </div>
-            </div>
+      <!-- Right: Photo card -->
+      <div class="hero-photo-wrap" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+        <div class="photo-glass-card">
+          <img src="assets/img/profile/profile1.jpg" alt="Om Naresh Nanekar" class="hero-photo">
+          <div class="photo-info-chip chip-tl">
+            <i class="bi bi-mortarboard-fill"></i>
+            <span>CE Student</span>
           </div>
-
-          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
-            <div class="about-content">
-              <div class="section-header">
-                <span class="badge-text">Get to Know Me</span>
-                <h2>Passionate about learning and creating digital experiences.</h2>
-              </div>
-
-              <div class="description">
-                <p>I am a computer engineering student passionate about programming, technology, and solving real-world problems. I enjoy learning new skills, experimenting with code, and building practical projects. With a creative and analytical mindset, I focus on applying concepts effectively to create meaningful digital solutions, continuously improving myself through hands-on experience and curiosity.</p>
-
-                <p>I am always eager to collaborate, explore innovative ideas, and contribute to projects that make a real impact.</p>
-              </div>
-
-              <div class="details-grid">
-                <div class="detail-row">
-                  <div class="detail-item">
-                    <span class="detail-label">Field of interest </span>
-                    <span class="detail-value">Computer Engineering</span>
-                  </div>
-                  <div class="detail-item">
-                    <span class="detail-label">Experience Level</span>
-                    <span class="detail-value">Intermediate</span>
-                  </div>
-                </div>
-                <div class="detail-row">
-                  <div class="detail-item">
-                    <span class="detail-label">Education</span>
-                    <span class="detail-value">Diploma in Computer Engineering, MSBTE</span>
-                  </div>
-                  <div class="detail-item">
-                    <span class="detail-label">Languages</span>
-                    <span class="detail-value">Marathi, Hindi, English </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="cta-section">
-                <a href="#contact" class="btn btn-outline">
-                  <i class="bi bi-chat-dots"></i>
-                  Let's Talk
-                </a>
-              </div>
-            </div>
+          <div class="photo-info-chip chip-br">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>Pune, India</span>
           </div>
         </div>
-
+        <!-- Floating accent rings -->
+        <div class="float-ring ring-outer"></div>
+        <div class="float-ring ring-inner"></div>
       </div>
 
-    </section><!-- /About Section -->
+    </div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
+    <!-- scroll hint -->
+    <a href="#about" class="scroll-hint" aria-label="Scroll down">
+      <i class="bi bi-chevron-down"></i>
+    </a>
+  </section>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>Technologies and tools I use while learning, building, and improving my projects.</p>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row g-4">
-
-          <!-- Python -->
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="skill-card">
-              <div class="skill-icon">
-                <i class="bi bi-filetype-py"></i>
-              </div>
-              <h4>Python</h4>
-              <p>For CLI apps, automation, and problem solving.</p>
-            </div>
-          </div>
-
-          <!-- C -->
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="skill-card">
-              <div class="skill-icon">
-                <i class="bi bi-code-slash"></i>
-              </div>
-              <h4>C</h4>
-              <p>Strong foundation for programming logic and low-level concepts.</p>
-            </div>
-          </div>
-
-          <!-- C++ -->
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="skill-card">
-              <div class="skill-icon">
-                <i class="bi bi-c-square"></i>
-              </div>
-              <h4>C++</h4>
-              <p>Useful for object-oriented programming and graphics projects.</p>
-            </div>
-          </div>
-
-          <!-- HTML -->
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="skill-card">
-              <div class="skill-icon">
-                <i class="bi bi-filetype-html"></i>
-              </div>
-              <h4>HTML</h4>
-              <p>Building the structure of responsive web pages.</p>
-            </div>
-          </div>
-
-          <!-- CSS -->
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="skill-card">
-              <div class="skill-icon">
-                <i class="bi bi-filetype-css"></i>
-              </div>
-              <h4>CSS</h4>
-              <p>Styling layouts, sections, and responsive interfaces.</p>
-            </div>
-          </div>
-
-          <!-- Git -->
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="skill-card">
-              <div class="skill-icon">
-                <i class="bi bi-git"></i>
-              </div>
-              <h4>Git</h4>
-              <p>Version control for tracking code changes properly.</p>
-            </div>
-          </div>
-
-          <!-- GitHub -->
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="skill-card">
-              <div class="skill-icon">
-                <i class="bi bi-github"></i>
-              </div>
-              <h4>GitHub</h4>
-              <p>Hosting projects, managing repositories, and sharing code.</p>
-            </div>
-          </div>
-
-          <!-- Linux -->
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="skill-card">
-              <div class="skill-icon">
-                <i class="bi bi-terminal"></i>
-              </div>
-              <h4>Linux</h4>
-              <p>Using terminal commands, file handling, and system basics.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Projects</h2>
-        <p>Some of the practical projects I have built while learning programming and problem solving.</p>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-
-          <!-- Expense Manager -->
-          <div class="col-md-6 col-lg-4">
-            <div class="project-card h-100">
-              <div class="project-content">
-                <div class="project-icon">
-                  <i class="bi bi-cash-stack"></i>
-                </div>
-                <h3>Expense Manager</h3>
-                <p>
-                  A Python CLI application to track daily expenses, manage records, and organize spending categories in a simple way.
-                </p>
-
-                <div class="project-tags">
-                  <span>Python</span>
-                  <span>CLI App</span>
-                  <span>Data Handling</span>
-                </div>
-
-                <div class="project-links">
-                  <a href="https://github.com/Om-Nanekar/Expense-Manager-Python-CLI-App-" class="btn-project">
-                    <i class="bi bi-github"></i> GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Jarvis -->
-          <div class="col-md-6 col-lg-4">
-            <div class="project-card h-100">
-              <div class="project-content">
-                <div class="project-icon">
-                  <i class="bi bi-mic"></i>
-                </div>
-                <h3>Jarvis - Simple Python Voice Assistant</h3>
-                <p>
-                  A voice assistant built with Python that responds to basic commands and demonstrates speech recognition and automation concepts.
-                </p>
-
-                <div class="project-tags">
-                  <span>Python</span>
-                  <span>Voice Assistant</span>
-                  <span>Automation</span>
-                </div>
-
-                <div class="project-links">
-                  <a href="https://github.com/Om-Nanekar/JARVIS---Python-Voice-Assistant" class="btn-project">
-                    <i class="bi bi-github"></i> GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Password Manager -->
-          <div class="col-md-6 col-lg-4">
-            <div class="project-card h-100">
-              <div class="project-content">
-                <div class="project-icon">
-                  <i class="bi bi-shield-lock"></i>
-                </div>
-                <h3>Password Manager</h3>
-                <p>
-                  A Python CLI app to securely store and manage passwords with a focus on usability and basic data protection.
-                </p>
-
-                <div class="project-tags">
-                  <span>Python</span>
-                  <span>CLI App</span>
-                  <span>Security</span>
-                </div>
-
-                <div class="project-links">
-                  <a href="https://github.com/Om-Nanekar/Password_Manager" class="btn-project">
-                    <i class="bi bi-github"></i> GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>I’m always open to new opportunities, learning, and exciting projects. Let’s connect!</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row g-4 g-lg-5">
-          <div class="col-lg-5">
-            <div class="info-box">
-              <h3>Contact Info</h3>
-              <p>Dedicated to building meaningful digital solutions while continuously improving my skills through hands-on experience.</p>
-
-              <div class="info-item">
-                <div class="icon-box">
-                  <i class="bi bi-geo-alt"></i>
-                </div>
-                <div class="content">
-                  <h4>Location</h4>
-                  <p>Chakan, Pune 410501</p>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <div class="icon-box">
-                  <i class="bi bi-telephone"></i>
-                </div>
-                <div class="content">
-                  <h4>Phone Number</h4>
-                  <p>+91 8421907056</p>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <div class="icon-box">
-                  <i class="bi bi-envelope"></i>
-                </div>
-                <div class="content">
-                  <h4>Email Address</h4>
-                  <p>nanekarom6746@gmail.com</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-7">
-            <div class="contact-form">
-              <h3>Get In Touch</h3>
-              
-
-              <form action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="91264817-79f0-4d97-8df3-6d84813d68cc">
-                <div class="row gy-4">
-
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                  </div>
-
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                  </div>
-
-                  <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                  </div>
-
-                  <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                  </div>
-
-                  <div class="col-12 text-center">
-                    <button type="submit" class="btn">Send Message</button>
-                    <input type="hidden" name="redirect" value="https://om-nanekar.github.io/portfolio-v2/thankyou.html">
-                  </div>
-
-                </div>
-              </form>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Contact Section -->
-
-  </main>
-
-  <footer id="footer" class="footer position-relative">
-
+  <!-- ═══════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════ -->
+  <section id="about" class="section-about">
     <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename"></strong> <span>All Rights Reserved</span></p>
+
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Who I am</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
       </div>
-      <div class="credits">
-        Designed by Om Nanekar
+
+      <div class="about-grid">
+
+        <!-- Profile card -->
+        <div class="about-profile glass-card" data-aos="fade-right" data-aos-duration="800">
+          <div class="about-img-wrap">
+            <img src="assets/img/profile/profile1.jpg" alt="Om Nanekar">
+            <div class="img-ring"></div>
+          </div>
+          <h3 class="about-name">Om Nanekar</h3>
+          <p class="about-title">Learning &amp; Building</p>
+          <div class="about-contacts">
+            <a href="mailto:nanekarom6746@gmail.com" class="contact-chip">
+              <i class="bi bi-envelope-fill"></i>
+              <span>nanekarom6746@gmail.com</span>
+            </a>
+            <a href="tel:+918421907056" class="contact-chip">
+              <i class="bi bi-telephone-fill"></i>
+              <span>+91 8421907056</span>
+            </a>
+            <div class="contact-chip">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>Chakan, Pune</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info content -->
+        <div class="about-info" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <span class="about-label">Get to know me</span>
+          <h3 class="about-heading">Passionate about learning<br>and creating digital experiences.</h3>
+          <p class="about-para">I am a computer engineering student passionate about programming, technology, and solving real-world problems. I enjoy learning new skills, experimenting with code, and building practical projects.</p>
+          <p class="about-para">With a creative and analytical mindset, I focus on applying concepts effectively to create meaningful digital solutions, continuously improving myself through hands-on experience and curiosity.</p>
+
+          <div class="detail-pills">
+            <div class="detail-pill glass-card">
+              <span class="pill-label">Field of Interest</span>
+              <span class="pill-val">Computer Engineering</span>
+            </div>
+            <div class="detail-pill glass-card">
+              <span class="pill-label">Experience Level</span>
+              <span class="pill-val">Intermediate</span>
+            </div>
+            <div class="detail-pill glass-card">
+              <span class="pill-label">Education</span>
+              <span class="pill-val">Diploma · MSBTE</span>
+            </div>
+            <div class="detail-pill glass-card">
+              <span class="pill-label">Languages</span>
+              <span class="pill-val">Marathi · Hindi · English</span>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn-primary mt-4 d-inline-flex">
+            <i class="bi bi-send-fill"></i> Let's Talk
+          </a>
+        </div>
+
       </div>
     </div>
+  </section>
 
+  <!-- ═══════════════════════════════════════
+       SKILLS
+  ═══════════════════════════════════════ -->
+  <section id="skills" class="section-skills">
+    <div class="container">
+
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">What I know</span>
+        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+        <p class="section-sub">Technologies and tools I use while learning, building, and improving my projects.</p>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card glass-card" data-aos="zoom-in" data-aos-delay="0">
+          <div class="skill-num">01</div>
+          <div class="skill-icon-bg" style="--c1:#3b82f6;--c2:#8b5cf6">
+            <i class="bi bi-filetype-py"></i>
+          </div>
+          <h4>Python</h4>
+          <p>CLI apps, automation and problem solving.</p>
+        </div>
+
+        <div class="skill-card glass-card" data-aos="zoom-in" data-aos-delay="60">
+          <div class="skill-num">02</div>
+          <div class="skill-icon-bg" style="--c1:#06b6d4;--c2:#0ea5e9">
+            <i class="bi bi-code-slash"></i>
+          </div>
+          <h4>C</h4>
+          <p>Strong foundation for programming logic and low-level concepts.</p>
+        </div>
+
+        <div class="skill-card glass-card" data-aos="zoom-in" data-aos-delay="120">
+          <div class="skill-num">03</div>
+          <div class="skill-icon-bg" style="--c1:#f59e0b;--c2:#f97316">
+            <i class="bi bi-c-square"></i>
+          </div>
+          <h4>C++</h4>
+          <p>Object-oriented programming and graphics projects.</p>
+        </div>
+
+        <div class="skill-card glass-card" data-aos="zoom-in" data-aos-delay="180">
+          <div class="skill-num">04</div>
+          <div class="skill-icon-bg" style="--c1:#ef4444;--c2:#f97316">
+            <i class="bi bi-filetype-html"></i>
+          </div>
+          <h4>HTML</h4>
+          <p>Building the structure of responsive web pages.</p>
+        </div>
+
+        <div class="skill-card glass-card" data-aos="zoom-in" data-aos-delay="240">
+          <div class="skill-num">05</div>
+          <div class="skill-icon-bg" style="--c1:#8b5cf6;--c2:#ec4899">
+            <i class="bi bi-filetype-css"></i>
+          </div>
+          <h4>CSS</h4>
+          <p>Styling layouts, sections, and responsive interfaces.</p>
+        </div>
+
+        <div class="skill-card glass-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="skill-num">06</div>
+          <div class="skill-icon-bg" style="--c1:#10b981;--c2:#06b6d4">
+            <i class="bi bi-git"></i>
+          </div>
+          <h4>Git</h4>
+          <p>Version control for tracking code changes properly.</p>
+        </div>
+
+        <div class="skill-card glass-card" data-aos="zoom-in" data-aos-delay="360">
+          <div class="skill-num">07</div>
+          <div class="skill-icon-bg" style="--c1:#6366f1;--c2:#8b5cf6">
+            <i class="bi bi-github"></i>
+          </div>
+          <h4>GitHub</h4>
+          <p>Hosting projects, managing repos, and sharing code.</p>
+        </div>
+
+        <div class="skill-card glass-card" data-aos="zoom-in" data-aos-delay="420">
+          <div class="skill-num">08</div>
+          <div class="skill-icon-bg" style="--c1:#f59e0b;--c2:#10b981">
+            <i class="bi bi-terminal"></i>
+          </div>
+          <h4>Linux</h4>
+          <p>Terminal commands, file handling, and system basics.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PROJECTS
+  ═══════════════════════════════════════ -->
+  <section id="projects" class="section-projects">
+    <div class="container">
+
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">What I've built</span>
+        <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+        <p class="section-sub">Practical projects built while learning programming and problem solving.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Expense Manager -->
+        <article class="project-card glass-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="proj-icon-wrap" style="--pc1:#3b82f6;--pc2:#8b5cf6">
+            <i class="bi bi-cash-stack"></i>
+          </div>
+          <div class="proj-num">01</div>
+          <h3 class="proj-title">Expense Manager</h3>
+          <p class="proj-desc">A Python CLI application to track daily expenses, manage records, and organize spending categories in a simple way.</p>
+          <div class="proj-tags">
+            <span class="tag">Python</span>
+            <span class="tag">CLI App</span>
+            <span class="tag">Data Handling</span>
+          </div>
+          <div class="proj-footer">
+            <a href="https://github.com/Om-Nanekar/Expense-Manager-Python-CLI-App-" target="_blank" class="btn-project">
+              <i class="bi bi-github"></i> View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Jarvis -->
+        <article class="project-card glass-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="proj-icon-wrap" style="--pc1:#10b981;--pc2:#06b6d4">
+            <i class="bi bi-mic-fill"></i>
+          </div>
+          <div class="proj-num">02</div>
+          <h3 class="proj-title">Jarvis — Voice Assistant</h3>
+          <p class="proj-desc">A voice assistant built with Python that responds to basic commands and demonstrates speech recognition and automation concepts.</p>
+          <div class="proj-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Voice AI</span>
+            <span class="tag">Automation</span>
+          </div>
+          <div class="proj-footer">
+            <a href="https://github.com/Om-Nanekar/JARVIS---Python-Voice-Assistant" target="_blank" class="btn-project">
+              <i class="bi bi-github"></i> View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Password Manager -->
+        <article class="project-card glass-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="proj-icon-wrap" style="--pc1:#f59e0b;--pc2:#ef4444">
+            <i class="bi bi-shield-lock-fill"></i>
+          </div>
+          <div class="proj-num">03</div>
+          <h3 class="proj-title">Password Manager</h3>
+          <p class="proj-desc">A Python CLI app to securely store and manage passwords with a focus on usability and basic data protection.</p>
+          <div class="proj-tags">
+            <span class="tag">Python</span>
+            <span class="tag">CLI App</span>
+            <span class="tag">Security</span>
+          </div>
+          <div class="proj-footer">
+            <a href="https://github.com/Om-Nanekar/Password_Manager" target="_blank" class="btn-project">
+              <i class="bi bi-github"></i> View on GitHub
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════ -->
+  <section id="contact" class="section-contact">
+    <div class="container">
+
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Say hello</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <p class="section-sub">I'm always open to new opportunities, learning, and exciting projects. Let's connect!</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Info -->
+        <div class="contact-info glass-card" data-aos="fade-right" data-aos-duration="800">
+          <h3>Contact Info</h3>
+          <p class="contact-sub">Dedicated to building meaningful digital solutions while continuously improving my skills through hands-on experience.</p>
+
+          <div class="info-list">
+            <div class="info-row">
+              <div class="info-icon" style="--ic:#3b82f6">
+                <i class="bi bi-geo-alt-fill"></i>
+              </div>
+              <div>
+                <span class="info-label">Location</span>
+                <span class="info-val">Chakan, Pune 410501</span>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon" style="--ic:#10b981">
+                <i class="bi bi-telephone-fill"></i>
+              </div>
+              <div>
+                <span class="info-label">Phone</span>
+                <span class="info-val">+91 8421907056</span>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon" style="--ic:#f59e0b">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+              <div>
+                <span class="info-label">Email</span>
+                <span class="info-val">nanekarom6746@gmail.com</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://github.com/Om-Nanekar"          target="_blank" class="social-pill"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/om-nanekar" target="_blank" class="social-pill"><i class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/918421907056"              target="_blank" class="social-pill"><i class="bi bi-whatsapp"></i></a>
+            <a href="mailto:nanekarom6746@gmail.com"                          class="social-pill"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form-wrap glass-card" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <h3>Send a Message</h3>
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="91264817-79f0-4d97-8df3-6d84813d68cc">
+            <input type="hidden" name="redirect"   value="/thankyou.html">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" name="name" placeholder="Enter your name" required>
+              </div>
+              <div class="form-group">
+                <label>Your Email</label>
+                <input type="email" name="email" placeholder="Enter your email" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Subject</label>
+              <input type="text" name="subject" placeholder="What's this about?" required>
+            </div>
+
+            <div class="form-group">
+              <label>Message</label>
+              <textarea name="message" rows="5" placeholder="Your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary btn-submit" id="submitBtn">
+              <i class="bi bi-send-fill"></i>
+              <span id="submitText">Send Message</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-name">Om Naresh Nanekar</p>
+      <p class="footer-copy">© <span id="year"></span> · Designed &amp; Built with ❤️</p>
+      <div class="footer-socials">
+        <a href="https://github.com/Om-Nanekar"          target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/om-nanekar" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://wa.me/918421907056"              target="_blank"><i class="bi bi-whatsapp"></i></a>
+        <a href="mailto:nanekarom6746@gmail.com"                         ><i class="bi bi-envelope-fill"></i></a>
+        <a href="https://www.instagram.com/om_naresh_nanekar_/" target="_blank"><i class="bi bi-instagram"></i></a>
+      </div>
+    </div>
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" aria-label="Back to top">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
+  <!-- Vendors -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
-
 </html>

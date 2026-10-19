@@ -5,17 +5,18 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Thank You | Om Naresh Nanekar</title>
+  <title>Thank You for Your Feedback | Om Naresh Nanekar</title>
   <meta name="description" content="Thank you for contacting Om Naresh Nanekar.">
   <meta name="robots" content="noindex">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,147 +28,247 @@
 
   <style>
     body {
-        min-height: 100vh;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 30px;
-        overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 20px;
+      position: relative;
+    }
+
+    .thank-wrapper {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
     }
 
     .thank-card {
-        width: 100%;
-        max-width: 560px;
-        padding: 40px;
-        border-radius: 20px;
-        text-align: center;
-
-        backdrop-filter: blur(12px);
-        background: rgba(255,255,255,0.06);
-        border: 1px solid rgba(255,255,255,.12);
-
-        box-shadow: 0 20px 60px rgba(0,0,0,.35);
+      padding: 48px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
-    .success-icon{
-        width:90px;
-        height:90px;
-        font-size:45px;
-        margin-bottom:25px;
+    .success-badge {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      background: rgba(0, 255, 136, 0.1);
+      border: 1px solid rgba(0, 255, 136, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green);
+      font-size: 40px;
+      box-shadow: 0 0 35px rgba(0, 255, 136, 0.25), inset 0 0 15px rgba(0, 255, 136, 0.1);
+      animation: pulseGlow 2.5s infinite ease-in-out;
     }
 
-    h1{
-        font-size:2rem;
-        font-weight:700;
-        margin-bottom:15px;
+    @keyframes pulseGlow {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 30px rgba(0, 255, 136, 0.25);
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 45px rgba(0, 255, 136, 0.45);
+      }
     }
 
-    p{
-      font-size:16px;
-      opacity:.85;
-      line-height:1.7;
-      margin-bottom:12px;
+    .thank-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: var(--text);
     }
 
-    .btn-home{
-        padding:12px 30px;
-        border-radius:40px;
-        margin-top:25px;
+    .thank-lead {
+      font-size: 1.05rem;
+      color: var(--green);
+      font-weight: 600;
+      margin-bottom: 14px;
+      letter-spacing: 0.02em;
     }
 
-    .social-links{
-      margin-top:35px;
+    .thank-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 30px;
     }
 
-    .social-links a{
-      width:48px;
-      height:48px;
-      display:inline-flex;
-      justify-content:center;
-      align-items:center;
-      border-radius:50%;
-      margin:0 8px;
-      transition:.3s;
-      font-size:20px;
+    .social-pills-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin-top: 28px;
     }
 
-    .social-links a:hover{
-      transform:translateY(-6px);
+    .footer-note {
+      margin-top: 28px;
+      font-size: 0.82rem;
+      color: var(--text-dim);
     }
 
-    .footer-note{
-      margin-top:30px;
-      font-size:14px;
-      opacity:.6;
+    @media (max-width: 576px) {
+      .thank-card {
+        padding: 36px 20px;
+      }
+      .success-badge {
+        width: 68px;
+        height: 68px;
+        font-size: 34px;
+      }
     }
   </style>
-
 </head>
 
 <body>
 
-<main>
+  <!-- ═══ ANIMATED BACKGROUND ═══ -->
+  <div class="bg-scene" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+    <div class="orb orb-5"></div>
+    <canvas id="particles-canvas"></canvas>
+  </div>
 
-<div class="thank-card" data-aos="zoom-in" data-aos-duration="900">
+  <main class="thank-wrapper">
+    <div class="thank-card glass-card" data-aos="zoom-in" data-aos-duration="800">
+      
+      <div class="success-badge" data-aos="zoom-in" data-aos-delay="200">
+        <i class="bi bi-check2-circle"></i>
+      </div>
 
-<div class="success-icon" data-aos="zoom-in" data-aos-delay="300">
-<i class="bi bi-check2-circle"></i>
-</div>
+      <h1 class="thank-title" data-aos="fade-up" data-aos-delay="300">
+        Thank You for Your <span class="gradient-text">Feedback!</span>
+      </h1>
 
-<h1 data-aos="fade-up" data-aos-delay="500">
-Thank You!
-</h1>
+      <p class="thank-lead" data-aos="fade-up" data-aos-delay="400">
+        Your message has been transmitted successfully.
+      </p>
 
-<p data-aos="fade-up" data-aos-delay="700">
-Your message has been received successfully.
-</p>
+      <p class="thank-desc" data-aos="fade-up" data-aos-delay="500">
+        I truly appreciate you taking the time to share your thoughts and connect with me. 
+        Whether it is about project inquiries, networking, feedback, or collaborations, 
+        I will review your message and get back to you as soon as possible.
+      </p>
 
-<p data-aos="fade-up" data-aos-delay="900">
-I truly appreciate you taking the time to reach out.
-Whether it's about collaboration, internships, projects, or simply connecting,
-I'll review your message and get back to you as soon as possible.
-</p>
+      <div data-aos="fade-up" data-aos-delay="600">
+        <a href="index.html" class="btn-primary">
+          <i class="bi bi-arrow-left-circle"></i> Back to Portfolio
+        </a>
+      </div>
 
-<a href="index.html" class="btn btn-primary btn-home" data-aos="fade-up" data-aos-delay="1100">
-<i class="bi bi-house-door-fill"></i>
-Back to Portfolio
-</a>
+      <div class="social-pills-row" data-aos="fade-up" data-aos-delay="700">
+        <a href="https://github.com/Om-Nanekar" target="_blank" class="social-pill" title="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/om-nanekar" target="_blank" class="social-pill" title="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://wa.me/918421907056" target="_blank" class="social-pill" title="WhatsApp">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+        <a href="mailto:nanekarom6746@gmail.com" class="social-pill" title="Email">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
+      </div>
 
-<div class="social-links" data-aos="fade-up" data-aos-delay="1300">
+      <div class="footer-note" data-aos="fade-up" data-aos-delay="800">
+        Designed &amp; Built by Om Naresh Nanekar
+      </div>
 
-<a href="https://github.com/Om-Nanekar" target="_blank">
-<i class="bi bi-github"></i>
-</a>
+    </div>
+  </main>
 
-<a href="https://linkedin.com/in/om-nanekar" target="_blank">
-<i class="bi bi-linkedin"></i>
-</a>
+  <!-- Vendor JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
 
-<a href="mailto:nanekarom6746@gmail.com">
-<i class="bi bi-envelope-fill"></i>
-</a>
+  <!-- Particles and Effects -->
+  <script>
+    // Particle Canvas Animation
+    const canvas = document.getElementById('particles-canvas');
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      function resize() {
+        canvas.width  = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize);
 
-</div>
+      const COLORS = ['#00ff88', '#a855f7', '#00d4ff', '#3b82f6', '#ec4899'];
+      const COUNT  = Math.min(60, Math.floor(window.innerWidth / 20));
 
-<div class="footer-note" data-aos="fade-up" data-aos-delay="1500">
-Made with ❤️ by Om Naresh Nanekar
-</div>
+      const particles = Array.from({ length: COUNT }, () => ({
+        x:   Math.random() * canvas.width,
+        y:   Math.random() * canvas.height,
+        r:   Math.random() * 1.8 + 0.4,
+        vx:  (Math.random() - 0.5) * 0.35,
+        vy:  (Math.random() - 0.5) * 0.35,
+        col: COLORS[Math.floor(Math.random() * COLORS.length)],
+        alpha: Math.random() * 0.4 + 0.1,
+      }));
 
-</div>
+      function drawParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = p.col;
+          ctx.globalAlpha = p.alpha;
+          ctx.fill();
+          ctx.globalAlpha = 1;
 
-</main>
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < -10) p.x = canvas.width + 10;
+          if (p.x > canvas.width + 10) p.x = -10;
+          if (p.y < -10) p.y = canvas.height + 10;
+          if (p.y > canvas.height + 10) p.y = -10;
+        });
 
-<!-- Vendor JS -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 120) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = particles[i].col;
+              ctx.globalAlpha = (1 - dist / 120) * 0.08;
+              ctx.lineWidth = 0.6;
+              ctx.stroke();
+              ctx.globalAlpha = 1;
+            }
+          }
+        }
+        requestAnimationFrame(drawParticles);
+      }
+      drawParticles();
+    }
 
-<script>
-AOS.init({
-duration:800,
-once:true
-});
-</script>
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true
+      });
+    }
+  </script>
 
 </body>
 </html>
